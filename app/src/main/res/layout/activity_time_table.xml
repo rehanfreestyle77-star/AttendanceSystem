@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0A0F1E"> <LinearLayout
+    android:id="@+id/headerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#0D47A1"
+    android:padding="30dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Timetable"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Schedule classes &amp; auto-reminders"
+        android:textColor="#90CAF9"
+        android:textSize="14sp"
+        android:layout_marginTop="4dp"/>
+</LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="#131929"
+                android:layout_marginBottom="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Class Details"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#60A5FA"
+                        android:layout_marginBottom="15dp"/>
+
+                    <EditText
+                        android:id="@+id/etTeacherEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:hint="Teacher's Email (e.g., teacher@gmail.com)"
+                        android:inputType="textEmailAddress"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#64748B"
+                        android:background="#0A0F1E"
+                        android:paddingStart="15dp"
+                        android:layout_marginBottom="15dp"/>
+
+                    <EditText
+                        android:id="@+id/etSubjectName"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:hint="Subject (e.g., 10th Maths)"
+                        android:inputType="text"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#64748B"
+                        android:background="#0A0F1E"
+                        android:paddingStart="15dp"
+                        android:layout_marginBottom="15dp"/>
+
+                    <Spinner
+                        android:id="@+id/spinnerDay"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:background="#0A0F1E"
+                        android:layout_marginBottom="20dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="25dp">
+
+                        <Button
+                            android:id="@+id/btnPickTime"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="55dp"
+                            android:text="Pick Time"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold"
+                            app:backgroundTint="#EA580C"
+                            app:cornerRadius="10dp"/>
+
+                        <TextView
+                            android:id="@+id/tvSelectedTime"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="No time selected"
+                            android:textColor="#94A3B8"
+                            android:textSize="14sp"
+                            android:textAlignment="center"
+                            android:textStyle="italic"/>
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btnSaveTimeTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:text="Save &amp; Notify"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:backgroundTint="#059669"
+                        app:cornerRadius="12dp"
+                        android:drawableLeft="@android:drawable/ic_menu_save"
+                        android:drawableTint="#FFFFFF"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

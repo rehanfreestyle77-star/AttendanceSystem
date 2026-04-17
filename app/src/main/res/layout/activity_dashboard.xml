@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0F1E"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#0D47A1"
+            android:paddingStart="20dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="22dp"
+            android:paddingBottom="32dp">
+
+            <LinearLayout
+                android:id="@+id/avatarRow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true">
+
+                <FrameLayout
+                    android:layout_width="55dp"
+                    android:layout_height="55dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/circle_avatar" />
+
+                    <TextView
+                        android:id="@+id/tvAvatarInitialsText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="HY"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/tvAvatarInitials"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        app:shapeAppearanceOverlay="@style/CircleImage"
+                        android:adjustViewBounds="true" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp">
+
+                    <TextView
+                        android:id="@+id/tvWelcome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Welcome, Teacher"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"/>
+
+                    <TextView
+                        android:id="@+id/tvTeacherSubject"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mathematics"
+                        android:textSize="12sp"
+                        android:textColor="#90CAF9"
+                        android:layout_marginTop="2dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btnMenu"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:src="@android:drawable/ic_menu_more" android:tint="#FFFFFF"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="More options"/>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/avatarRow"
+                android:layout_marginTop="24dp">
+
+                <TextView
+                    android:id="@+id/tvGreeting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Good Morning!"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"/>
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Saturday, 14 March 2026"
+                    android:textSize="12sp"
+                    android:textColor="#BBDEFB"
+                    android:background="@drawable/chip_bg"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:layout_marginTop="10dp"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="-20dp"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="#131929">
+
+            <LinearLayout
+                android:id="@+id/lectureContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TODAY'S LECTURES"
+                    android:textSize="10sp"
+                    android:textColor="#64748B"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="12dp"/>
+
+                <TextView
+                    android:id="@+id/tvNoLectures"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No lectures scheduled today."
+                    android:textSize="13sp"
+                    android:textColor="#475569"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QUICK ACTIONS"
+            android:textSize="10sp"
+            android:textColor="#64748B"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"/>
+
+        <GridLayout
+            android:id="@+id/grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:rowCount="4"
+            android:columnCount="2"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="30dp"
+            android:alignmentMode="alignMargins">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardTakeAttendance"
+                android:layout_width="0dp" android:layout_height="130dp"
+                android:layout_columnWeight="1" android:layout_margin="6dp"
+                app:cardCornerRadius="20dp" app:cardBackgroundColor="#0D2137">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:orientation="vertical" android:padding="16dp">
+                    <ImageView android:layout_width="36dp" android:layout_height="36dp"
+                        android:src="@android:drawable/ic_menu_agenda" app:tint="#60A5FA"
+                        android:background="@drawable/icon_bg_blue" android:padding="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Attendance" android:textSize="15sp" android:textStyle="bold"
+                        android:textColor="#F1F5F9" android:layout_marginTop="12dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Mark today" android:textSize="11sp" android:textColor="#64748B"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardNotify"
+                android:layout_width="0dp" android:layout_height="130dp"
+                android:layout_columnWeight="1" android:layout_margin="6dp"
+                app:cardCornerRadius="20dp" app:cardBackgroundColor="#1C1000">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:orientation="vertical" android:padding="16dp">
+                    <ImageView android:layout_width="36dp" android:layout_height="36dp"
+                        android:src="@android:drawable/ic_dialog_email" app:tint="#FB923C"
+                        android:background="@drawable/icon_bg_orange" android:padding="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Notify Parents" android:textSize="15sp" android:textStyle="bold"
+                        android:textColor="#F1F5F9" android:layout_marginTop="12dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Send alerts" android:textSize="11sp" android:textColor="#64748B"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewRecord"
+                android:layout_width="0dp" android:layout_height="130dp"
+                android:layout_columnWeight="1" android:layout_margin="6dp"
+                app:cardCornerRadius="20dp" app:cardBackgroundColor="#001A14">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:orientation="vertical" android:padding="16dp">
+                    <ImageView android:layout_width="36dp" android:layout_height="36dp"
+                        android:src="@android:drawable/ic_menu_report_image" app:tint="#34D399"
+                        android:background="@drawable/icon_bg_teal" android:padding="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Daily Report" android:textSize="15sp" android:textStyle="bold"
+                        android:textColor="#F1F5F9" android:layout_marginTop="12dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="View records" android:textSize="11sp" android:textColor="#64748B"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardAddStudent"
+                android:layout_width="0dp" android:layout_height="130dp"
+                android:layout_columnWeight="1" android:layout_margin="6dp"
+                app:cardCornerRadius="20dp" app:cardBackgroundColor="#061A06">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:orientation="vertical" android:padding="16dp">
+                    <ImageView android:layout_width="36dp" android:layout_height="36dp"
+                        android:src="@android:drawable/ic_menu_add" app:tint="#4ADE80"
+                        android:background="@drawable/icon_bg_green" android:padding="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Add Student" android:textSize="15sp" android:textStyle="bold"
+                        android:textColor="#F1F5F9" android:layout_marginTop="12dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Enroll new" android:textSize="11sp" android:textColor="#64748B"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardMonthlyReport"
+                android:layout_width="0dp" android:layout_height="130dp"
+                android:layout_columnWeight="1" android:layout_margin="6dp"
+                app:cardCornerRadius="20dp" app:cardBackgroundColor="#150D2E">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:orientation="vertical" android:padding="16dp">
+                    <ImageView android:layout_width="36dp" android:layout_height="36dp"
+                        android:src="@android:drawable/ic_menu_month" app:tint="#A78BFA"
+                        android:background="@drawable/icon_bg_purple" android:padding="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Monthly Report" android:textSize="15sp" android:textStyle="bold"
+                        android:textColor="#F1F5F9" android:layout_marginTop="12dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Full summary" android:textSize="11sp" android:textColor="#64748B"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardProgress"
+                android:layout_width="0dp" android:layout_height="130dp"
+                android:layout_columnWeight="1" android:layout_margin="6dp"
+                app:cardCornerRadius="20dp" app:cardBackgroundColor="#1A1000">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:orientation="vertical" android:padding="16dp">
+                    <ImageView android:layout_width="36dp" android:layout_height="36dp"
+                        android:src="@android:drawable/stat_sys_upload_done" app:tint="#FCD34D"
+                        android:background="@drawable/icon_bg_amber" android:padding="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Progress" android:textSize="15sp" android:textStyle="bold"
+                        android:textColor="#F1F5F9" android:layout_marginTop="12dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Student trends" android:textSize="11sp" android:textColor="#64748B"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardDeleteStudent"
+                android:layout_width="0dp" android:layout_height="130dp"
+                android:layout_columnWeight="1" android:layout_margin="6dp"
+                app:cardCornerRadius="20dp" app:cardBackgroundColor="#1A0000">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:orientation="vertical" android:padding="16dp">
+                    <ImageView android:layout_width="36dp" android:layout_height="36dp"
+                        android:src="@android:drawable/ic_menu_delete" app:tint="#F87171"
+                        android:background="@drawable/icon_bg_red" android:padding="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Delete" android:textSize="15sp" android:textStyle="bold"
+                        android:textColor="#F1F5F9" android:layout_marginTop="12dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Remove student" android:textSize="11sp" android:textColor="#64748B"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardTimeTable"
+                android:layout_width="0dp" android:layout_height="130dp"
+                android:layout_columnWeight="1" android:layout_margin="6dp"
+                app:cardCornerRadius="20dp" app:cardBackgroundColor="#0A1520">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:orientation="vertical" android:padding="16dp">
+                    <ImageView android:layout_width="36dp" android:layout_height="36dp"
+                        android:src="@android:drawable/ic_lock_idle_alarm" app:tint="#94A3B8"
+                        android:background="@drawable/icon_bg_grey" android:padding="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Set Reminder" android:textSize="15sp" android:textStyle="bold"
+                        android:textColor="#F1F5F9" android:layout_marginTop="12dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Timetable" android:textSize="11sp" android:textColor="#64748B"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0A0F1E">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#0D47A1"
+        android:padding="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Student"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register manually or upload Excel"
+            android:textColor="#90CAF9"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Manual Registration"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#60A5FA"
+                android:layout_marginBottom="15dp"/>
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:hint="Student Name"
+                android:inputType="textPersonName"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#64748B"
+                android:background="#131929"
+                android:paddingStart="15dp"
+                android:layout_marginBottom="10dp"/>
+
+            <EditText
+                android:id="@+id/etRollNo"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:hint="Roll Number"
+                android:inputType="number"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#64748B"
+                android:background="#131929"
+                android:paddingStart="15dp"
+                android:layout_marginBottom="10dp"/>
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:hint="Parent's Phone Number"
+                android:inputType="phone"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#64748B"
+                android:background="#131929"
+                android:paddingStart="15dp"
+                android:layout_marginBottom="10dp"/>
+
+            <Spinner
+                android:id="@+id/spinnerClass"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="#131929"
+                android:layout_marginBottom="20dp"/>
+
+            <Button
+                android:id="@+id/btnSaveStudent"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="Save Student"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#0D47A1"
+                android:layout_marginBottom="25dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#1E2D4A"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bulk Upload (CSV)"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#34D399"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Format: Roll No, Name, Phone, Class"
+                android:textSize="12sp"
+                android:textColor="#64748B"
+                android:layout_marginBottom="15dp"/>
+
+            <Button
+                android:id="@+id/btnUploadCSV"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="Upload Excel File"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#059669"
+                android:layout_marginBottom="20dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
