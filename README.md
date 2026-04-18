@@ -8,7 +8,7 @@ An Android application for managing student/staff attendance digitally — built
 
 | Login Screen | Principal Dashboard | Teacher Interface |
 |---|---|---|
-| ![Login](screenshots/login.png) | ![Principal](screenshots/principal_dashboard.png) | ![Teacher](screenshots/teacher_interface.png) |
+| ![Login](https://github.com/rehanfreestyle77-star/AttendanceSystem/blob/8e4bf4ae262961313eca93db064d078b6f4c50c0/login.png) | ![Principal](screenshots/principal_dashboard.png) | ![Teacher](screenshots/teacher_interface.png) |
 
 > Replace the above image paths with your actual screenshot files.
 
