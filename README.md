@@ -14,7 +14,7 @@ An Android application for managing student/staff attendance digitally — built
 
 ---
 
-## ✨ Features
+### Features
 
 ### 👨‍💼 Principal
 - Secure login with hardcoded admin credentials
